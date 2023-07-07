@@ -1,0 +1,10 @@
+pymongo
+tensorflow
+pyspark==3.3.2
+kafka-python
+TikTokLive
+pytchat
+pandas
+transformers
+flask
+requests

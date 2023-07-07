@@ -1,0 +1,8 @@
+{
+	"short_name": "ViTHSD",
+	"name": "Vietnamese Targeted Hate Speech Detection",
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff"
+}
