@@ -8,7 +8,7 @@ import TargetChart from './components/TargetChart';
 import HistoryCard from './components/HistoryCard';
 import ReplayIcon from '@mui/icons-material/Replay';
 
-export default function YoutubeAnalystPage() {
+export default function TiktokAnalystPage() {
 	const [target, setTarget] = useState(undefined);
 	const [label, setLabel] = useState(undefined);
 	const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +18,7 @@ export default function YoutubeAnalystPage() {
 			const config = {
 				method: 'get',
 				maxBodyLength: Infinity,
-				url: 'http://localhost:5001/api/youtube/count',
+				url: 'http://localhost:5001/api/tiktok/count',
 				headers: {
 					'Content-Type': 'application/json',
 				},
@@ -55,7 +55,7 @@ export default function YoutubeAnalystPage() {
 		const config = {
 			method: 'get',
 			maxBodyLength: Infinity,
-			url: 'http://localhost:5001/api/youtube/count',
+			url: 'http://localhost:5001/api/tiktok/count',
 			headers: {
 				'Content-Type': 'application/json',
 			},

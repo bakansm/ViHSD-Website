@@ -6,8 +6,11 @@ from predict import predict
 from kafkaHelper import initProducer, produceRecord
 
 producer = initProducer()
-VIDEO_ID = sys.argv[1]
-chat = pytchat.create(video_id=VIDEO_ID)
+VID_ID = sys.argv[1]
+
+
+# Streaming DataA
+chat = pytchat.create(video_id=VID_ID)
 if(chat.is_alive()):
     print("Livestream chat connected successfully")
     while chat.is_alive():
@@ -25,6 +28,5 @@ if(chat.is_alive()):
                 'predict': predicted_data,
                 'predict-time': predict_time,
             }
-            produceRecord(data, producer, VIDEO_ID)
 
-                
+            produceRecord(data, producer, VID_ID)

@@ -26,7 +26,7 @@ export default function HomePage() {
 		const config = {
 			method: 'post',
 			maxBodyLength: Infinity,
-			url: 'http://44.213.88.156:5000/predict',
+			url: 'http://localhost:5000/predict',
 			headers: {
 				'Content-Type': 'application/json',
 			},
@@ -86,22 +86,33 @@ export default function HomePage() {
 							{...register('message')}
 						/>
 					</FormControl>
-					<Box
-						display={'flex'}
-						flexDirection={'row'}
-						marginTop={'3rem'}>
-						<Typography
-							component={'h2'}
-							variant={'h5'}
-							textAlign={'left'}>
-							Prediction:
-						</Typography>
-						{isPredicting ? (
-							<>
-								<Typography>Predicting</Typography>
+
+					{isPredicting ? (
+						<Box
+							marginTop={'4rem'}
+							display={'flex'}
+							justifyContent={'center'}>
+							<Typography
+								component={'h2'}
+								variant={'h5'}
+								textAlign={'left'}>
+								Predicting
+							</Typography>
+							<Box marginLeft={'1rem'}>
 								<CircularProgress />
-							</>
-						) : (
+							</Box>
+						</Box>
+					) : (
+						<Box
+							display={'flex'}
+							flexDirection={'row'}
+							marginTop={'3rem'}>
+							<Typography
+								component={'h2'}
+								variant={'h5'}
+								textAlign={'left'}>
+								Prediction:
+							</Typography>
 							<Box
 								display={'flex'}
 								flexDirection={'column'}
@@ -127,8 +138,8 @@ export default function HomePage() {
 									)
 								)}
 							</Box>
-						)}
-					</Box>
+						</Box>
+					)}
 				</Box>
 			</Box>
 		</Container>

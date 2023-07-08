@@ -1,12 +1,13 @@
+import { Youtube } from '../../models/Youtube.js';
+
 export const countClean = async (req, res) => {
-	const individual = 'individual#clean';
-	const groups = 'groups#clean';
-	const religion = 'religion#clean';
-	const race = 'race#clean';
-	const politics = 'politics#clean';
+	const individual = 'individual: clean';
+	const groups = 'groups: clean';
+	const religion = 'religion: clean';
+	const race = 'race: clean';
+	const politics = 'politics: clean';
 
 	let count = 0;
-
 	await Youtube.countDocuments({ predict: { $regex: individual, $options: 'i' } })
 		.then((data) => {
 			count += data;

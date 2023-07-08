@@ -26,7 +26,7 @@ export default function YoutubePage() {
 		const config = {
 			method: 'post',
 			maxBodyLength: Infinity,
-			url: 'http://44.213.88.156:5000/streaming/youtube',
+			url: 'http://44.213.88.156:500/streaming/youtube',
 			headers: {
 				'Content-Type': 'application/json',
 			},
